@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styled from '@emotion/styled';
-
-import { withTranslation } from 'utils/with-i18next';
-
-import SelectLanguages from './SelectLanguages';
-import CustomLink from './CustomLink';
 
 const HeaderRoot = styled(`header`)`
   left: 0;
@@ -37,38 +31,30 @@ const ListItem = styled('div')`
   display: flex;
 `;
 
-const ListActions = styled('div')`
-  display: flex;
-`;
-
 const Space = styled('div')`
   flex: 1 1 auto;
 `;
 
-export function Header({ t }) {
+export function Header2() {
   return (
     <HeaderRoot>
       <HeaderContainer>
         <NavRoot>
           <ListItem>
-            <CustomLink href={'#features'} name={t('phrases.features')} />
-            <CustomLink href={'#exampleGetApi'} name={t('phrases.apiExample')} />
-            <CustomLink href={'http://localhost:3000/myprt'} name={t('My Profile')} />
+            <a className="link" href="http://localhost:3000" rel="noopener noreferrer">
+              Back to Main Page
+            </a>
           </ListItem>
 
           <Space />
-
-          <ListActions>
-            <SelectLanguages t={t} />
-          </ListActions>
         </NavRoot>
       </HeaderContainer>
     </HeaderRoot>
   );
 }
 
-Header.propTypes = {
+Header2.propTypes = {
   t: PropTypes.func,
 };
 
-export default withTranslation('common')(Header);
+export default Header2;

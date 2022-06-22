@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import styled from '@emotion/styled';
 
-import { withTranslation } from 'utils/with-i18next';
-
 const BannerRoot = styled('div')`
   display: flex;
   flex-direction: column;
@@ -14,7 +12,7 @@ const BannerRoot = styled('div')`
 `;
 
 const Title = styled('h1')`
-  font-size: 70px;
+  font-size: 30px;
 `;
 
 const SubTitle = styled('h2')`
@@ -27,20 +25,20 @@ const Logo = styled('img')`
   width: 110px;
 `;
 
-export function Banner({ t }) {
+export function MyProfile() {
   return (
     <BannerRoot>
-      <Logo src="/static/images/reac-next-boilerplate-logo.svg" alt="react-next-boilerplate" />
+      <Logo src="/static/favicon/317d226c-07b4-45de-a026-02858bb4c87d.jpg" alt="Display Picture" />
 
-      <Title>{t('title')}</Title>
+      <Title>Muizzah Khan</Title>
 
-      <SubTitle>{t('subTitle')}</SubTitle>
+      <SubTitle>Software Developer Intern</SubTitle>
     </BannerRoot>
   );
 }
 
-Banner.propTypes = {
+MyProfile.propTypes = {
   t: PropTypes.func,
 };
 
-export default withTranslation('banner')(Banner);
+export default MyProfile;
