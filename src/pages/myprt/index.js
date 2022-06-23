@@ -1,16 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MyProfile from 'components/myprofile';
-import Header2 from 'components/header2';
+import Header from 'components/header';
+import Footer from 'components/Footer';
+import Profile from 'components/data';
 
 export function myprt() {
   return (
     <>
-      <Header2 />
+      <Header />
 
       <main>
         <MyProfile />
+        <Profile />
       </main>
+
+      <Footer />
     </>
   );
 }

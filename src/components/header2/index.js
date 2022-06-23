@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const HeaderRoot = styled(`header`)`
@@ -12,7 +11,7 @@ const HeaderRoot = styled(`header`)`
 `;
 
 const HeaderContainer = styled('div')`
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(25, 25, 25, 0.3);
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06);
 `;
 
@@ -31,6 +30,10 @@ const ListItem = styled('div')`
   display: flex;
 `;
 
+const ListActions = styled('div')`
+  display: flex;
+`;
+
 const Space = styled('div')`
   flex: 1 1 auto;
 `;
@@ -44,17 +47,18 @@ export function Header2() {
             <a className="link" href="http://localhost:3000" rel="noopener noreferrer">
               Back to Main Page
             </a>
+            <Space />
           </ListItem>
-
           <Space />
+          <ListActions>
+            <a className="link" href="#Profile" rel="noopener noreferrer">
+              Features
+            </a>
+          </ListActions>
         </NavRoot>
       </HeaderContainer>
     </HeaderRoot>
   );
 }
-
-Header2.propTypes = {
-  t: PropTypes.func,
-};
 
 export default Header2;
