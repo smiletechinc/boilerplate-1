@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from 'components/Header';
 import Banner from 'components/Banner';
+import ScrollButton from 'components/scroll button';
 import Footer from 'components/Footer';
 
 function Layout({ children }) {
@@ -17,6 +18,7 @@ function Layout({ children }) {
       </main>
 
       <Footer />
+      <ScrollButton />
     </>
   );
 }

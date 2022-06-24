@@ -76,10 +76,11 @@ describe('useInjectReducer hook', () => {
     };
     reducerInjectors.default = jest.fn().mockImplementation(() => injectors);
     store = configureStore({});
-    ComponentWithReducer = () => {
+    ComponentWithReducer();
+    {
       useInjectReducer({ key: 'test', reducer });
       return null;
-    };
+    }
   });
 
   it('should inject a given reducer', () => {

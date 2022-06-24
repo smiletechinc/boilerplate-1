@@ -45,11 +45,16 @@ const Space = styled('div')`
   flex: 1 1 auto;
 `;
 
+const Logo = styled('img')`
+  width: 50px;
+`;
+
 export function Header({ t }) {
   return (
     <HeaderRoot>
       <HeaderContainer>
         <NavRoot>
+          <Logo src="/static/images/reac-next-boilerplate-logo.svg" alt="react-next-boilerplate" />
           <ListItem>
             <CustomLink href={'#features'} name={t('phrases.features')} />
             <CustomLink href={'#exampleGetApi'} name={t('phrases.apiExample')} />

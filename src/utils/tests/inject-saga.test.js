@@ -101,15 +101,16 @@ describe('useInjectSaga hook', () => {
       injectSaga: jest.fn(),
       ejectSaga: jest.fn(),
     };
-    ComponentWithSaga = () => {
+    ComponentWithSaga();
+    {
       useInjectSaga({
         key: 'test',
         saga: testSaga,
         mode: 'testMode',
       });
       return null;
-    };
-    sagaInjectors.default.mockClear();
+    }
+    //sagaInjectors.default.mockClear();
   });
 
   it('should inject given saga and mode', () => {

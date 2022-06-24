@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { withTranslation } from 'utils/with-i18next';
 
 const Container = styled('div')`
   width: 100%;
@@ -43,7 +45,7 @@ const Content = styled('p')`
   font-weight: 400;
 `;
 
-export function Profile() {
+export function Profile({ t }) {
   return (
     <Container id="Profile">
       <FeaturesRoot>
@@ -52,13 +54,13 @@ export function Profile() {
             <FeatureItem>
               <Title>Education</Title>
 
-              <Content>{'muizzah.Education'}</Content>
+              <Content>{t('muizzah.Education')}</Content>
             </FeatureItem>
 
             <FeatureItem>
               <Title>Experience</Title>
 
-              <Content>{'muizzah.Experience'}</Content>
+              <Content>{t('muizzah.Experience')}</Content>
             </FeatureItem>
           </FeaturesList>
         </FeaturesListContainer>
@@ -67,4 +69,8 @@ export function Profile() {
   );
 }
 
-export default Profile;
+Profile.propTypes = {
+  t: PropTypes.func,
+};
+
+export default withTranslation('info')(Profile);
